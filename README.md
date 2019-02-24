@@ -2,7 +2,7 @@
 
 Here is the email from our mentor:
 
-'
+---
 1. How do we define business success and what amount of investment means a great amount? After setting out the threshold and dividing your examples into different categories(e.g. success/not success), it's good to perform a summary statistical analysis of the features for each of those different categories, and also attach some visualizations with your analysis. 
 
  
@@ -32,4 +32,4 @@ I also highly recommend R for doing regression and random forest. R provides a w
  
 
 For some of the tutorials, you can check out Andrew NG's lecture on machine learning to get familiar with some of the concepts. There are also a lot of Kaggle kernels, tech blogs and code tutorials about data analysis and implementing these algorithms.
-'
+---
