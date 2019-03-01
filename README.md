@@ -1,35 +1,7 @@
 # DataSci - "Which industry codes experience greatest success in each MD county"
 
-Here is the email from our mentor:
-
 ---
-1. How do we define business success and what amount of investment means a great amount? After setting out the threshold and dividing your examples into different categories(e.g. success/not success), it's good to perform a summary statistical analysis of the features for each of those different categories, and also attach some visualizations with your analysis. 
-
- 
-
-2. The next step will be trying out some different models on your data. 
-
-The general form of a supervised learning question is:
-
-y = f(x), where y is the target variable (the variable you want to predict, i.e. total revenue, success or not...), x is the set of predictive variables (the variables you use to predict y, i.e. location, GDP of the county, industry of the business...)
-
-If the target variable (the variable you want to predict) is quantitative, you can use regression models. If the target variable is binary or categorical, you can use logistic regression or random forest. And I will focus on what are the variable importance and regression coefficients for each of the predictive variable and how to interpret them. Let's say if y is total revenue, and x is GDP of the county, then positive coefficient for x means the wealthier the location of the company, the higher the revenue they will generate.
-
- 
-
-3. Deal with categorical features. The predictive variables can include a lot of categorical ones, like industry, county, etc. The common way to deal with them is to do one-hot-encoding or frequency encoding. In that way, you can turn your categorical variables into numerical ones and fit a model on them. Also a lot of packages like sklearn are well implemented, so when you assign the input variable, you just need to point out which features are categorical and the package will take care of it for you.
-
- 
-
-4. For the tools you can use, Python has a lot of great packages. E.g., numpy is a package for importing, cleaning, combining and doing basic summary analysis on datasets. sklearn is the package for implementing machine learning models. matplotlib, seaborn, plotly are some nice visualizations tools.
-
-I also highly recommend R for doing regression and random forest. R provides a whole bunch of detailed statistical analysis and fancy visualizations (ggplot package), and is kind of intuitive if you are familiar with Python.
-
-
-
-5. How judges will review the project: Technical tools you used is only one side of the picture, how you organize your material and present them out to be insightful and attractive is often more critical factor when readers review your project. I believe you guys will have some very interesting insights when you brings in your domain knowledge, and some cool visualizations will definitely attract people's eyes.
-
- 
-
-For some of the tutorials, you can check out Andrew NG's lecture on machine learning to get familiar with some of the concepts. There are also a lot of Kaggle kernels, tech blogs and code tutorials about data analysis and implementing these algorithms.
+Our project focuses on the application of data science to business regulation and legislation. The most important thing to look at in terms of business performance is how businesses affect a community and how local government can foster economic growth. Using machine learning, we examined business’ community impact with regard to capital investment, jobs created, and revenue increase. We then categorize the businesses’ impact scores based on NAICS industry code to determine which industries have the greatest economic impact on their county’s respective economy/RGDP. County legislators could determine new industry incentivization models from these findings.
+We use a Jupyter notebook and IPython to accomplish our project objectives. After simple data sanitation (deleting descriptions, etc), the dataset is imported as a Pandas Dataframe. Then, we use Pandas to determine the unique counties represented in the dataset. We use ScikitLearn Principal Component Analysis to reduce the dimensionality of “impact fields” (defined as capital investment, jobs created, and revenue increase) into an overall business impact score. We fit the model on the overall dataset, but then separated the data out by county and applied the PCA model individually. We sort mean business impact score by NAICS code for each county separately. 
+According to our data, NAICS Sector Code 53: “Real Estate and Rental and Leasing” scored highest overall (no regard for county), but few individual counties had 53 scoring highest. A plurality of the counties had 42: “Wholesale Trade” scoring highest. NAICS classifies the Wholesale trade sector establishments as “engaged in wholesaling merchandise, generally without transformation, and rendering services incidental to the sale of merchandise.”  Prince Georges County has 48: Transportation and Warehousing as the highest scoring sector. A legislative body should not only examine the highest scorers, though. Examining the lowest scorers could show what areas need improvement and thus which industries to promote.
 ---
